@@ -1,0 +1,10 @@
+{
+  "App.title": "Application Title",
+  "App.subtitle": "Application Subtitle",
+  "Header.welcome": "Welcome",
+  "Header.greeting": "Hello world",
+  "Navigation.home": "Home",
+  "Navigation.about": "About",
+  "Navigation.contact": "Contact us"
+}
+

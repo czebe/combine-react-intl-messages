@@ -1,2 +1,2 @@
-# extract-react-intl-messages
-Extracts messages from react-intl Message Descriptors
+# combine-react-intl-messages
+Extracts and combines messages from react-intl Message Descriptors.
