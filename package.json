@@ -6,7 +6,6 @@
   "repository": "git@github.com:czebe/combine-react-intl-messages.git",
   "author": "czebemarci@gmail.com",
   "license": "MIT",
-  "private": true,
   "bin": {
     "combine-messages": "dist/lib/combine-react-intl-messages.js"
   },
