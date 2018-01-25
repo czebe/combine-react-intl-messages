@@ -42,7 +42,8 @@
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
-    "prepublish": "npm run lint && npm test && npm run build",
+    "Xprepublish": "npm run lint && npm test && npm run build",
+    "prepublish": "npm run lint && npm run build",
     "postpublish": "git push origin master --tags",
     "prepare": "npm run build"
   },
