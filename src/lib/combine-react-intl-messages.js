@@ -19,7 +19,6 @@ const defaultMessages = globSync(input, { ignore: ignore })
     return fs.readFileSync(filename, "utf8");
   })
   .reduce((messages, file) => {
-    console.log(file);
     var extracted = transform(file, {
       presets: ["react", "env", "stage-0"],
       plugins: ["react-intl"]
