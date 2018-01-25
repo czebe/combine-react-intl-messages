@@ -9,6 +9,10 @@
   "bin": {
     "combine-messages": "dist/lib/combine-react-intl-messages.js"
   },
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-react-intl": "^2.4.0",
