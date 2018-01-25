@@ -1,6 +1,6 @@
 {
   "name": "combine-react-intl-messages",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Extracts and combines messages from react-intl Message Descriptors",
   "main": "index.js",
   "repository": "git@github.com:czebe/combine-react-intl-messages.git",
