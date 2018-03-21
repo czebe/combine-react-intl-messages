@@ -4,7 +4,7 @@
 import path from "path";
 import fs from "fs";
 import glob from "glob";
-import { transform } from "@babel/core";
+import { transformFileSync } from "@babel/core";
 import minimist from "minimist";
 
 const argv = minimist(process.argv.slice(2));
@@ -15,12 +15,8 @@ const ignore = argv.ignore;
 const globSync = glob.sync;
 
 const defaultMessages = globSync(input, { ignore: ignore })
-  .map(filename => {
-    return fs.readFileSync(filename, "utf8");
-  })
   .reduce((messages, file) => {
-    console.log(file); // eslint-disable-line no-console
-    const extracted = transform(file, {
+    const extracted = transformFileSync(file, {
       presets: ["@babel/preset-react"],
       plugins: ["react-intl"]
     }).metadata["react-intl"].messages;
