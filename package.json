@@ -31,15 +31,15 @@
   },
   "scripts": {
     "pretest": "npm run build",
-    "test": "nyc mocha --require babel-register --timeout 8000 './test/**/*.spec.js'",
-    "coverage": "nyc report --reporter=html --reporter=text-lcov > coverage.lcov && codecov",
+    "XX_test": "nyc mocha --require babel-register --timeout 8000 './test/**/*.spec.js'",
+    "XX_coverage": "nyc report --reporter=html --reporter=text-lcov > coverage.lcov && codecov",
     "start": "npm-watch",
     "build": "babel src -d dist",
     "lint": "eslint src test",
     "patch": "npm version patch && npm publish",
     "minor": "npm version minor && npm publish",
     "major": "npm version major && npm publish",
-    "Xprepublish": "npm run lint && npm test && npm run build",
+    "XX_prepublish": "npm run lint && npm test && npm run build",
     "prepublish": "npm run lint && npm run build",
     "postpublish": "git push origin master --tags",
     "prepare": "npm run build"
