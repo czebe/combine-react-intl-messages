@@ -59,7 +59,7 @@ if (index) {
     const lang = path.basename(file, path.extname(file)).split(".")[1];
     if (lang) {
       const langKey = lang.indexOf("-") > 0 ? `'${lang}'` : lang;
-      const contents = contents.concat(
+      contents = contents.concat(
         es5
           ? `  ${langKey}: require('./messages.${lang}.json'),`
           : `export { default as ${langKey} } from './messages.${lang}.json';`
