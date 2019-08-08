@@ -60,8 +60,8 @@ if (index) {
     if (lang) {
       contents = contents.concat(
         es5
-          ? `export { default as ${lang} } from './messages.${lang}.json';`
-          : `  '${lang}': require('./messages.${lang}.json'),`
+          ? `  '${lang}': require('./messages.${lang}.json'),`
+          : `export { default as ${lang} } from './messages.${lang}.json';`
       );
     }
     return contents;
