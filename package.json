@@ -1,6 +1,6 @@
 {
-  "name": "combine-react-intl-messages",
-  "version": "2.0.2",
+  "name": "com3ine-react-intl-messages",
+  "version": "3.0.0",
   "description": "Extracts and combines messages from react-intl Message Descriptors",
   "main": "index.js",
   "repository": "git@github.com:czebe/combine-react-intl-messages.git",
@@ -14,20 +14,20 @@
     "dist"
   ],
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/preset-react": "^7.0.0-beta.42",
-    "babel-plugin-react-intl": "^2.4.0",
-    "glob": "^7.1.2",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-react-intl": "^4.1.7",
+    "glob": "^7.1.4",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
-    "eslint": "^4.19.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "npm-watch": "^0.3.0",
-    "prettier": "^1.11.1"
+    "@babel/cli": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "npm-watch": "^0.6.0",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "pretest": "npm run build",

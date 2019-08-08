@@ -16,6 +16,7 @@ const input = path.normalize(argv.i);
 const output = path.normalize(argv.o);
 const ignore = argv.ignore;
 const index = argv.index;
+const es5 = argv.es5;
 const globSync = glob.sync;
 
 const defaultMessages = globSync(input, { ignore: ignore })
@@ -58,7 +59,9 @@ if (index) {
     const lang = path.basename(file, path.extname(file)).split(".")[1];
     if (lang) {
       contents = contents.concat(
-        `export { default as ${lang} } from "./messages.${lang}.json";`
+        es5
+          ? `export { default as ${lang} } from './messages.${lang}.json';`
+          : `  '${lang}': require('./messages.${lang}.json'),`
       );
     }
     return contents;
@@ -67,7 +70,9 @@ if (index) {
   const indexLocation = path.resolve(path.dirname(output), "index.js");
   const exportsOutput = [
     "// Auto-generated file. Do not edit directly or commit to repository.",
+    ...(es5 ? ["module.exports = {"] : []),
     ...messageFileExports,
+    ...(es5 ? ["};"] : []),
     ""
   ];
 
