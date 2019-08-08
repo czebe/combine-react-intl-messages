@@ -58,10 +58,11 @@ if (index) {
   }).reduce((contents, file) => {
     const lang = path.basename(file, path.extname(file)).split(".")[1];
     if (lang) {
-      contents = contents.concat(
+      const langKey = lang.indexOf("-") > 0 ? `'${lang}'` : lang;
+      const contents = contents.concat(
         es5
-          ? `  '${lang}': require('./messages.${lang}.json'),`
-          : `export { default as ${lang} } from './messages.${lang}.json';`
+          ? `  ${langKey}: require('./messages.${lang}.json'),`
+          : `export { default as ${langKey} } from './messages.${lang}.json';`
       );
     }
     return contents;
