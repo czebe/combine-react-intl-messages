@@ -69,7 +69,8 @@ if (index) {
 
   const indexLocation = path.resolve(path.dirname(output), "index.js");
   const exportsOutput = [
-    "// Auto-generated file. Do not edit directly or commit to repository.",
+    "/* eslint-disable global-require */",
+    "/* Auto-generated file. Do not edit directly or commit to repository. */",
     ...(es5 ? ["module.exports = {"] : []),
     ...messageFileExports,
     ...(es5 ? ["};"] : []),
